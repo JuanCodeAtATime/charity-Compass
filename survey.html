@@ -30,32 +30,85 @@
 
     </div>
     <!-- SECTION 1 -->
-    <div class="container section1">
+    <div class="container section1 survey-bg">
         <div class="row">
             <div class="col-md-6">
-                <h1 class="tagline"><span style="color: #ff0000">PHILANTHRO</span>MATCH SURVEY</h1>
-                <h5 class="quote"><em>In 10 minutes or less, this survey will help us guide your giving heart in the
+                <h1 class="tagline"><span style="color: #FCD667">PHILANTHRO</span>MATCH SURVEY</h1>
+                <h5><em>In 5 minutes or less, this survey will help us guide your giving heart in the
                         right direction.</em>
                 </h5>
             </div>
         </div>
+
+
+        <hr>
+        <h5>1. What is most important to you?</h5>
+        <select class="chosen-select" id="q1">
+            <option value=""></option>
+            <option value="1">The Environment</option>
+            <option value="2">Education</option>
+            <option value="3">Hunger</option>
+            <option value="4">Animal Welfare</option>
+            <option value="5">Sick Children</option>
+            <option value="6">Other</option>
+        </select>
         <br>
 
-        <div class="row">
-            <div class="col-md-6 search">
-                <button type="button" class="btn bg-danger btn-block" id="surveyBtn">
-                    <h6 class="homeBtns">Start Survey</h6>
-                </button>
-            </div>
-        </div>
+        <h5>2. Geographically, where would you like to make the most impact?</h5>
+        <select class="chosen-select" id="q2">
+            <option value=""></option>
+            <option value="1">Your Neighborhood</option>
+            <option value="2">Your State</option>
+            <option value="3">Your Region</option>
+            <option value="4">Your Nation</option>
+            <option value="5">Internationally</option>
+        </select>
+        <br>
 
 
+        <h5>3. What do you view as the most important indicator of a nonprofit organization's perfromance</h5>
+        <select class="chosen-select" id="q3">
+            <option value=""></option>
+            <option value="1">It's Leadership</option>
+            <option value="2">It's Social Impact</option>
+            <option value="3">It's Reputation</option>
+            <option value="4">It's Transparency</option>
+            <option value="5">Other</option>
+        </select>
+        <br>
 
-        <!-- Container holding three thumbnails -->
-        <br><br>
-        <div class="survey-dump">
+        <h5>4. You rarely do something just out of sheer curiosity.</h5>
+        <select class="chosen-select" id="q4">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
 
-        </div>
+        <h5>5. People can rarely upset you.</h5>
+        <select class="chosen-select" id="q5">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <br>
+        <br>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+                aria-hidden="true"></i>
+            Submit</button>
+
+        <hr>
+
+
         <!--Container holding three thumbnails -->
 
     </div>
