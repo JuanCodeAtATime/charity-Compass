@@ -25,7 +25,7 @@
 
         <div class="list">
             <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-            <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+            <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
             <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
         </div>
 
@@ -50,16 +50,14 @@
         </div>
 
         <div class="row">
-            <div class="col-md-3 login">
-                <button type="button" class="btn btn-outline-dark bg-dark btn-block" id="loginBtn">
-                    <h6 class="homeBtns">Login</h6>
+            <div class="col-md-6 login">
+                <button type="button" class="btn bg-success btn-block" id="loginBtn">
+                    <a href="login.html" class="homeBtns">
+                        <h6 class="homeBtns">Login or Create Account</h6>
+                    </a>
                 </button>
             </div>
-            <div class="col-md-3 login">
-                <button type="button" class="btn btn-outline-primary bg-primary btn-block" id="signup">
-                    <h6 class="homeBtns">SignUp</h6>
-                </button>
-            </div>
+
         </div>
 
         <!-- Container holding three thumbnails -->
@@ -69,10 +67,14 @@
                 <div class="row">
                     <div class="col-md-4">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:92%;">
-                            <h2>Individual Donors</h2>
-                            <p class="thumb-text">Learn More...</p>
-                        </div>
+                        <a href="search-charities.html">
+                            <div class="content" style="background: rgba(0, 0, 0, 0.5); width:92%;">
+                                <h2>Search Charities A-Z</h2>
+                                <p class="thumb-text">Learn more about charity organizations based on categories you
+                                    choose.
+                                </p>
+                            </div>
+                        </a>
                     </div>
 
                     <div class="col-md-4">
@@ -87,7 +89,9 @@
                         <a href="survey.html">
                             <div class="content" id="survey" style="background: rgba(0, 0, 0, 0.5); width:92%;">
                                 <h2>Philanthro-Match</h2>
-                                <p class="thumb-text">Take the survey!</p>
+                                <p class="thumb-text">Take the quick survey to find the charity organzations that best
+                                    align with
+                                    <em>your</em> values.</p>
                             </div>
                         </a>
                     </div>
