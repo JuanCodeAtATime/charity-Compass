@@ -84,9 +84,10 @@ h5 {
   
   /* Navbar links on mouse-over */
   .navbar a:hover {
-    background-color: blue;
+    background: rgba(0, 0, 0, 0.5);
     color: whitesmoke;
     text-decoration: none;
+    border-radius: 5%;
 
   }
   
@@ -139,3 +140,13 @@ h5 {
 
 /* End Thumbnail Images */
   
+/* Stats on hompage */
+
+.stats {
+  text-align: left;
+}
+
+#pMBtn {
+text-decoration: none;
+
+}
