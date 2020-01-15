@@ -1,1 +1,1 @@
-# charity-Compass
+# charity-Compass-Sequelize
