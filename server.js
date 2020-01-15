@@ -13,19 +13,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-
 //Database: CONNECTING TO DATABASE.JS FILE
-const db = require('./config/database');
-
-// Exports the connection for other files to use (TEST CONNECTION)
-//Test db
-db.authenticate()
-    .then(() => console.log('Database connected...'))
-    .catch(err => console.log('Error: ' + err))
-
+const db = require('./models');
+const app = express();
+//CONNECTION TO OUR PORT
+const PORT = process.env.PORT || 8080;
 
 // Setting up the apps and port (For Express app)
-const app = express();
 
 // Creating our INDEX ROUTE
 app.get('/', (req, res) => res.send('INDEX'));
@@ -33,12 +27,9 @@ app.get('/', (req, res) => res.send('INDEX'));
 // Charity Routes
 app.use('/charity', require('./routes/charity'));
 
-//CONNECTION TO OUR PORT
-const PORT = process.env.PORT || 8080;
-
-
 
 // app.listen will run our server!!
-app.listen(PORT, console.log(`Server started on port${PORT}`)); // shortcut for an arrow function use back ticks
-
+db.sequelize.sync().then(() => {
+    app.listen(PORT, console.log(`Server started on port${PORT}`)); // shortcut for an arrow function use back ticks
+})
 
