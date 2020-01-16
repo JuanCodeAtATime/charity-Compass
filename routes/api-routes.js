@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
-var db = require("../models");
-var passport = require("../config/passport");
+const db = require("../models");
+const passport = require("../config/passport");
+const users = [];
 //
 module.exports = function (app) {
     // Using the passport.authenticate middleware with our local strategy.
@@ -17,17 +18,31 @@ module.exports = function (app) {
     // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
     // otherwise send back an error
     app.post("/api/signup", function (req, res) {
-        console.log(req.body);
+
         db.User.create({
+            name: req.body.name,
             email: req.body.email,
             password: req.body.password
         }).then(function () {
-            res.redirect(307, "/api/login");
+            // res.redirect("/login");
+            let name = req.body.name;
+            let email = req.body.email;
+            let password = req.body.password;
+            console.log("==========================")
+            console.log("SUCCESS!" + name + " and his email(" + email + ") has been successfully registered.");
+            console.log("==========================")
+
+            // res.send should be at the bottom of your function body
+            // res.send("hello");
+            res.redirect("/login");
+
+
         }).catch(function (err) {
             console.log(err);
             res.json(err);
             // res.status(422).json(err.errors[0].message);
         });
+
     });
     //
     // Route for logging user out
