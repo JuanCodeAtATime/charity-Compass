@@ -150,3 +150,14 @@ h5 {
 text-decoration: none;
 
 }
+
+#invisible-cat-box {
+  display: none;
+}
+
+/* #cat-data-dump {
+
+  color: whitesmoke;
+  background-color: slategray;
+  height: auto;
+} */

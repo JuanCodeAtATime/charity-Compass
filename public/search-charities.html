@@ -30,63 +30,77 @@
         </div>
 
     </div>
+    <hr>
+
+
     <!-- SECTION 1 -->
     <div class="container section1">
-        <div class="row search-charity">
-            <div class="col-md-6">
-                <h1 class="tagline">SEARCH<span style="color: #FCD667"> CHARITIES</span> BY CATEGORY</h1>
 
+        <div class="row">
+            <div class="col-md-4 search">
+                <input type="text" id="search" placeholder="Enter charity name, category or keyword">
             </div>
+            <div class="col-md-6 search" id="search-data-dump"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 login">
+                <button type="button" class="btn btn-primary btn-block" id="search-orgs">Search</button>
+            </div>
+        </div>
+
+        <div class="row search-charity">
+            <div class="col-md-5">
+                <h1 class="tagline">SEARCH<span style="color: #FCD667"> CHARITIES</span> BY CATEGORY</h1>
+            </div>
+
+        </div>
+        <br>
+        <!-- Category Data dumps here -->
+        <div class="row">
+            <div class="col-md-5 search" id="cat-data-dump"></div>
         </div>
         <br>
 
-        <div class="row">
-            <div class="col-md-6 search">
-                <input type="text" id="search" placeholder="Enter charity name, category or keyword">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 login">
-                <button type="button" class="btn bg-success btn-block" id="loginBtn">
-                    <a href="login.html" class="homeBtns">
-                        <h6 class="homeBtns">Search Charities</h6>
-                    </a>
-                </button>
-            </div>
-
+        <!-- This div/input field is display:none but it holds the numeric values of the Charity categories -->
+        <div class="col-md-6" id="invisible-cat-box">
+            <input type="number" class="form-control" id="invisible-cat-box">
         </div>
 
         <!-- Container holding thumbnails of charity categories  -->
-        <br>
-        <div class="thumbnails2">
-            <div class="container">
+
+        <div class="container">
+
+
+
+            <!-- Category Cards -->
+            <div class="thumbnails2">
                 <div class="row">
                     <div class="col-md-3">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;">
+                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="animal">
                             <h3>Animals</h3>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;">
+                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="arts">
                             <h3>Arts, Culture, Humanities</h3>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" id="survey" style="background: rgba(0, 0, 0, 0.5); width:89%;">
-                            <h3>Community Development</h3>
+                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="ed">
+                            <h3>Education</h3>
                         </div>
 
                     </div>
                     <div class="col-md-3">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;">
-                            <h3>Education</h3>
+                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="enviro">
+                            <h3>Environment</h3>
                         </div>
                     </div>
 
@@ -97,29 +111,30 @@
                 <div class="row">
                     <div class="col-md-3">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;">
-                            <h3>Environment</h3>
+                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="comm-dev">
+                            <h3>Community Development</h3>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;">
+                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="health">
                             <h3>Health</h3>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" id="survey" style="background: rgba(0, 0, 0, 0.5); width:89%;">
-                            <h3>Human and Civil Rights</h3>
+                        <div class="content" id="survey" style="background: rgba(0, 0, 0, 0.5); width:89%;"
+                            id="human-svcs">
+                            <h3>Human Services</h3>
                         </div>
 
                     </div>
                     <div class="col-md-3">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;">
-                            <h3>Human Services</h3>
+                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="human-rights">
+                            <h3>Human & Civil Rights</h3>
                         </div>
                     </div>
 
@@ -129,31 +144,26 @@
                 <div class="row">
                     <div class="col-md-3">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;">
+                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="intern">
                             <h3>International</h3>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;">
-                            <h3>Research and Public Policy</h3>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" id="survey" style="background: rgba(0, 0, 0, 0.5); width:89%;">
+                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="religion">
                             <h3>Religion</h3>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;">
-                            <h3>Veterans/Military</h3>
+                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="res-pub">
+                            <h3>Research and Public Policy</h3>
                         </div>
                     </div>
+
+
 
                 </div>
 
@@ -163,32 +173,21 @@
         <!--Container holding three thumbnails -->
     </div>
     <!-- END SECTION 1 -->
-    <!-- BEGIN SECTION 2 -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md" id="charity-data">
-                <!-- charity data will be dumped here -->
-
-            </div>
-        </div>
-        <br>
-
-    </div>
-    <!-- END SECTION 2 -->
-
 
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+    <script src="assets/js/search-category-api.js">
+    </script>
 </body>
 
 </html>
