@@ -161,3 +161,24 @@ text-decoration: none;
   background-color: slategray;
   height: auto;
 } */
+
+#search-data-dump {
+  overflow: hidden;  
+  height: auto;
+}
+
+div.scroll { 
+  margin:10px, 4px; 
+  padding:4px;   
+  width: auto; 
+  height: 100px; 
+  overflow-x: hidden; 
+  overflow-x: auto; 
+  text-align:justify; 
+} 
+
+/* Red search button */
+#search-orgs {
+  margin-bottom: 5px;
+}
+

@@ -21,29 +21,38 @@ $(document).ready(function () {
     // is the country button pressed by User 
     function searchCategory(queryURL, search) {
 
-        queryURL = baseURL + category_search + search;
+        queryURL = (baseURL + category_search) + search;
 
         $.ajax({
             url: queryURL,
             method: "GET"
         })
             .done(function (response) {
-                console.log("this is the 'get' response:" + response)
+                console.log("this is the 'get' response for ein in index numeral 0: " + response)
 
-                for (let i = 0; i < response.data; i++) {
+                for (let i = 0; i < response.length; i++) {
 
                     // Creating and storing a div tag
                     let dataDump = $("<div>");
                     //Created attributes containing src properties for both still and animated gifs
 
                     // Creating a paragraph tag with the result item's rating
-                    let p = $("<p>").text("Rating: " + response.data);
+                    let n = $("<h4>").text("Charity Name: " + response[0, i].charityName);
+                    let classif = $("<h5>").text("Classification: " + response[0, i].irsClassification.nteeClassification);
+                    let city = $("<h5>").text("City: " + response[0, i].mailingAddress.city);
+                    let state = $("<h5>").text("State: " + response[0, i].mailingAddress.stateOrProvince);
+                    let irs = $("<h5>").text("IRS Subsection: " + response[0, i].irsClassification.subsection);
+
 
                     // Prepending the dataDump to the newly created div
-                    let categoryDump = $("#cat-data-dump").prepend(dataDump);
+                    let categoryDump = $("#cat-data-dump").append(dataDump);
 
-                    //Prepending the Ratings paragraph element to the gifsDiv
-                    categoryDump.prepend(p);
+                    //Prepending the Charities info elements to the data dump div
+                    categoryDump.append(n);
+                    categoryDump.append(classif);
+                    categoryDump.append(city);
+                    categoryDump.append(state);
+                    categoryDump.append(irs);
 
                 }
             });
@@ -123,23 +132,37 @@ $(document).ready(function () {
             .done(function (response) {
                 console.log("this is the 'get' response:" + response)
 
-                for (let i = 0; i < response.data; i++) {
+                for (let i = 0; i < response.length; i++) {
 
                     // Creating and storing a div tag
                     let dataDump = $("<div>");
                     //Created attributes containing src properties for both still and animated gifs
 
                     // Creating a paragraph tag with the result item's rating
-                    let p = $("<p>").text("Rating: " + response.data);
+                    let n = $("<h4>").text("Charity Name: " + response[0, i].charityName);
+                    let classif = $("<h5>").text("Classification: " + response[0, i].irsClassification.nteeClassification);
+                    let city = $("<h5>").text("City: " + response[0, i].mailingAddress.city);
+                    let state = $("<h5>").text("State: " + response[0, i].mailingAddress.stateOrProvince);
+                    let irs = $("<h5>").text("IRS Subsection: " + response[0, i].irsClassification.subsection);
 
                     // Prepending the dataDump to the newly created div
-                    let categoryDump = $("#cat-data-dump").prepend(dataDump);
+                    let searchDump = $("#search-data-dump").append(dataDump);
 
-                    //Prepending the Ratings paragraph element to the gifsDiv
-                    categoryDump.prepend(p);
+                    //Prepending the Charities info elements to the data dump div
+                    searchDump.append(n);
+                    searchDump.append(classif);
+                    searchDump.append(city);
+                    searchDump.append(state);
+                    searchDump.append(irs);
 
                 }
             });
+    }
+
+
+    // Function to empty out the search input field
+    function clear() {
+        $("#search").empty();
     }
 
     $("#search-orgs").on('click', function (event) {
@@ -147,9 +170,8 @@ $(document).ready(function () {
         searchInput = $("#search").val().trim();
         console.log("Success " + "You just entered " + searchInput)
 
-        //This runQuery function called here runs the query the User types in.  Without this
-        //call, the User input creates a button, but doesn't fetch the data from the host site.
         searchOrgs("", searchInput);
+        clear();
 
         //This prevents the buttons default behavior when clicked (which is submitting a form)
         event.preventDefault();
