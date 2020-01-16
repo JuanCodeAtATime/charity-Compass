@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  background-image: url("../images/compass.jpg");
+  background-size: cover; 
+  background-attachment: fixed;
+}
+
+.section1 {
+  margin-top: 100px;
+ 
+}
+
+.survey-bg {
+  background: rgba(0, 0, 0, 0.5);
+  min-width: 390px;
+
+}
+
+h5 {
+  color: whitesmoke;
+}
+
+.quote {
+  color: black;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, .83);
+}
+
+.title {   
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: whitesmoke;
+    font-size: 2.0 rem;       
+}
+
+.tagline {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    color: white;      
+    
+}
+
+/* login and sign up buttons */
+.homeBtns, h6 {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+
+}  
+
+
+
+#search {
+  /* display: block; */
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+
+/* Margin below login buttons */
+.login {
+    margin-bottom: 125px;
+}
+
+/* Style the navigation bar */
+.navbar {
+    width: 100%;
+    background-color: black;
+    overflow: auto;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    /* float: right; */
+    text-align: right; 
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 5%;
+
+  }
+  
+  
+  
+  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+/* Start Thumbnail Images */
+  
+  .thumbnails {
+    background-color: whitesmoke;
+    height: auto;
+    padding: 8px;
+    border-radius: 5px;
+  }
+  .thumbnails2, .search-charity {
+    background: rgba(0, 0, 0, 0.5);
+    height: auto;
+    padding: 8px;
+    border-radius: 5px;   
+  }
+
+  .thumb-text {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+ 
+  
+  .content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    top: 0;
+    color: #f1f1f1; /* Grey text */   
+    padding: 22px; /* Some padding */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    margin: 0 auto; /* Center it */  
+    opacity: 0.85;
+    transition: 0.3s;
+  }   
+    
+    .content:hover {opacity: 1; cursor: pointer;}
+
+    
+
+/* End Thumbnail Images */
+  
+/* Stats on hompage */
+
+.stats {
+  text-align: left;
+}
+
+#pMBtn {
+text-decoration: none;
+
+}

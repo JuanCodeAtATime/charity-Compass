@@ -1,35 +1,32 @@
-// The charity API that will give us the Name, Category, Cause and Location should be linked to the DATABASE
-// First create a port
-// Use the HTML written by Juan to connect the HTM & API so that information will get stored on the DB
-// Must use Sequelize and mySQL (Workbench)
-
-
-// to run port, open terminal and do this: npm run dev
-// then check connection by openning chrome and searching localhost:8080 (IT WORKED :)  ) 
+// Requiring necessary npm packages
+const express = require("express");
+const bodyParser = require("body-parser");
+// const cookieParser = require("cookie-parser");
+const session = require("express-session");
+// Requiring passport as we've configured it
+const passport = require("./middleware/passport");
 //
-// Server.js (like app.js in video I was watching) would be the initial starting point for the node/express server.
-
-// Dependencies //
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
-//Database: CONNECTING TO DATABASE.JS FILE
-const db = require('./models');
+// Setting up port and requiring models for syncing
+const PORT = process.env.PORT || 5000;
+const db = require("./models");
+//
+// Creating express app and configuring middleware needed for authentication
 const app = express();
-//CONNECTION TO OUR PORT
-const PORT = process.env.PORT || 8080;
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.static("public"));
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
-// Setting up the apps and port (For Express app)
-
-// Creating our INDEX ROUTE
-app.get('/', (req, res) => res.send('INDEX'));
-
-// Charity Routes
-app.use('/charity', require('./routes/charity'));
-
-
-// app.listen will run our server!!
-db.sequelize.sync().then(() => {
-    app.listen(PORT, console.log(`Server started on port${PORT}`)); // shortcut for an arrow function use back ticks
-})
-
+// Requiring our routes
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+//
+// Syncing our database and logging a message to the user upon success
+db.sequelize.sync().then(function () {
+    app.listen(PORT, function () {
+        console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+    });
+});
