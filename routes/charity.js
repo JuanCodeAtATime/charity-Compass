@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const db = require("../models")
-const CharityCompass = require("../models").CharityCompass
+const CharityCompasses = require("../models").CharityCompasses
 //Route for /Charity
 //router.get('/', (req, res) => res.send('CHARITY')); //test to see if it works localhost:8080/charity
 
 // //Change this after 
 // router.get('/', (req, res) =>
-//     db.CharityCompass.findAll()
+//     db.CharityCompasses.findAll()
 //         .then(charity => {
 //             console.log(charity)
 //             res.sendStatus(200);
@@ -24,9 +24,9 @@ module.exports = function (router) {
     // GET route for getting all of the charity
     router.get("/api/charity", function (req, res) {
         // findAll returns all entries for a table when used with no options
-        db.CharityCompass.findAll({}).then(function (dbCharityCompass) {
+        db.CharityCompass.findAll({}).then(function (dbCharityCompasses) {
             // We have access to the charity as an argument inside of the callback function
-            res.json(dbCharityCompass);
+            res.json(dbCharityCompasses);
         });
     });
     // POST route for saving a new charity
@@ -35,12 +35,12 @@ module.exports = function (router) {
         // create takes an argument of an object describing the item we want to
         // insert into our table. In this case we just we pass in an object with a text
         // and complete property (req.body)
-        db.CharityCompass.create({
+        db.CharityCompasses.create({
             text: req.body.text,
             complete: req.body.complete
-        }).then(function (dbCharityCompass) {
+        }).then(function (dbCharityCompasses) {
             // We have access to the new charity as an argument inside of the callback function
-            res.json(dbCharityCompass);
+            res.json(dbCharityCompasses);
         });
     });
 
@@ -58,15 +58,15 @@ module.exports = function (router) {
     router.put("/api/charity", function (req, res) {
         // Update takes in an object describing the properties we want to update, and
         // we use where to describe which objects we want to update
-        db.CharityCompass.update({
+        db.CharityCompasses.update({
             text: req.body.text,
             complete: req.body.complete
         }, {
             where: {
                 id: req.body.id
             }
-        }).then(function (dbCharityCompass) {
-            res.json(dbCharityCompass);
+        }).then(function (dbCharityCompasses) {
+            res.json(dbCharityCompasses);
         });
     });
 
