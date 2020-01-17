@@ -21,8 +21,14 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         }
     }, {
+        //add hooks here
+        hooks: {
+            beforeCreate: function (user) {
+                user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+            }
+        }
 
-        //add hooks here......................................!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! define name
+
 
     });
     // Creating a custom method for our User model. 
@@ -40,7 +46,7 @@ module.exports = function (sequelize, DataTypes) {
             bcrypt.genSaltSync(10),
             null
         );
-        // return User;
+        return User;
     });
 }
 
