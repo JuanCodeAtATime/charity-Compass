@@ -3,9 +3,9 @@
 const bcrypt = require("bcryptjs");
 // Creating our User model
 //Set it as export because we will need it required on the server
-module.exports = function (sequelize, DataTypes) {
-    return sequelize.define("User", {
 
+module.exports = function (sequelize, DataTypes) {
+    let User = sequelize.define("User", {
         // The email cannot be null, and must be a proper email before creation
         email: {
             type: DataTypes.STRING,

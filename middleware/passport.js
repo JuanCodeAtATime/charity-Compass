@@ -1,9 +1,9 @@
 //we import passport packages required for authentication
-var passport = require("passport");
-var LocalStrategy = require("passport-local").Strategy;
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
 //
 //We will need the models folder to check passport agains
-var db = require("../models");
+const db = require("../models");
 //
 // Telling passport we want to use a Local Strategy. In other words,
 //we want login with a username/email and password

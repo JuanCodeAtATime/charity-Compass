@@ -45,14 +45,9 @@
         <br>
 
         <div class="row">
-            <div class="col-md-6 search">
-                <input type="text" id="search" placeholder="Search for charities, news, etc..">
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-6 login">
-                <button type="button" class="btn bg-success btn-block" id="loginBtn">
+            <div class="col-md-4 login">
+                <button type="button" class="btn btn-lg bg-danger btn-block" id="loginBtn">
                     <a href="login.html" class="homeBtns">
                         <h6 class="homeBtns">Login or Create Account</h6>
                     </a>
@@ -60,9 +55,7 @@
             </div>
 
         </div>
-
         <!-- Container holding three thumbnails -->
-        <br><br>
         <div class="thumbnails">
             <div class="container">
                 <div class="row">
@@ -70,9 +63,9 @@
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
                         <a href="search-charities.html">
                             <div class="content" style="background: rgba(0, 0, 0, 0.5); width:92%;">
-                                <h2>Search Charities A-Z</h2>
-                                <p class="thumb-text">Learn more about charity organizations based on categories you
-                                    choose.
+                                <h2>Search Charities</h2>
+                                <p class="thumb-text">Learn more about charity organizations based on charity name or
+                                    keyword.
                                 </p>
                             </div>
                         </a>
@@ -80,10 +73,13 @@
 
                     <div class="col-md-4">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <div class="content" style="background: rgba(0, 0, 0, 0.5); width:92%;">
-                            <h2>Corporate Donors</h2>
-                            <p class="thumb-text">Learn More...</p>
-                        </div>
+                        <a href="search-charities.html">
+                            <div class="content" style="background: rgba(0, 0, 0, 0.5); width:92%;">
+                                <h2>By Cause or Category</h2>
+                                <p class="thumb-text">Don't know where to start? Learn more about causes and categories
+                                    with a simple click of a button.</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-4">
                         <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
@@ -148,28 +144,22 @@
         <a href="survey.html"> <button type="button" class="btn btn-primary btn-lg btn-block" id="submit"><i
                     class="fa fa-check-circle" aria-hidden="true"></i> Take
                 <em><b><span style="color: #FCD667" id="pMBtn">Philanthro</span>Match</em></b> survey</button></a>
-
         <hr>
 
-
-
-
     </div>
+
+
     <!-- END SECTION 2 -->
 
-
-
-
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="assets/js/search-category-api.js"></script>
 </body>
 
 </html>
