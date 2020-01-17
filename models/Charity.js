@@ -2,9 +2,10 @@
 
 module.exports = (sequelize, types) => {
     return CharityCompass = sequelize.define("CharityCompass", {
-        name: types.STRING,
-        category: types.STRING,
-        cause: types.STRING,
-        location: types.STRING
+        Charity_Foundation_Name: types.STRING,
+        Classification: types.STRING,
+        City: types.STRING,
+        State: types.STRING,
+        IRS_Subsection: types.STRING
     });
-}
+};
