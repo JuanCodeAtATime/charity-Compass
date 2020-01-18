@@ -1,8 +1,9 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-const users = [];
-//
+// var Charity = require("../models/charities.js");
+var Charity = require("../models/");
+
 module.exports = function (app) {
     // Using the passport.authenticate middleware with our local strategy.
     // If the user has valid login credentials, send them to the members page.
@@ -70,4 +71,43 @@ module.exports = function (app) {
             });
         }
     });
+
+    // Get all charities
+    app.get("/api/members", function (req, res) {
+        Charity.findAll({}).then(function (results) {
+            res.json(results);
+        });
+    });
+
+
+    // Add new charity
+    app.post("/api/new", function (req, res) {
+        console.log("Charity Data:");
+        console.log(req.body);
+        Charity.create({
+            name: req.body.name,
+            classification: req.body.classification,
+            city: req.body.city,
+            state: req.body.state
+        }).then(function (results) {
+            res.json(results);
+        });
+    });
+
+    // Delete a charity
+    app.delete("/api/charity/:id", function (req, res) {
+        console.log("Charity ID:");
+        console.log(req.params.id);
+        Charity.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(function () {
+            res.end();
+        });
+    });
+
+
 };
+
+

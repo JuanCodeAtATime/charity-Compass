@@ -1,10 +1,9 @@
 $(document).ready(function () {
 
-    let firstName = "";
+
     // When user clicks add-btn
     $("#login-btn").on("click", function (event) {
         let user = {
-            firstName: $("#firstName").val().trim(),
             password: $("#password").val().trim(),
             email: $("#email").val().trim()
         };
@@ -16,13 +15,10 @@ $(document).ready(function () {
         $.post("/api/login", user)
             // On success, run the following code
             .then(function (req, response) {
-                function pushFirstName() {
-                    document.getElementById("member-name").innerHTML = "firstName";
-                };
                 // Log the data we found
                 console.log(response);
+                alert("Login Successful!")
                 window.location.href = "/members";
-                pushFirstName();
 
 
             });

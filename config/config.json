@@ -1,8 +1,16 @@
 {
+  "local": {
+    "username": "root",
+    "password": "Daisy2990!",
+    "database": "charity_compass",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
   "development": {
     "username": "root",
     "password": "Daisy2990!",
-    "database": "authentication",
+    "database": "charity_compass",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false

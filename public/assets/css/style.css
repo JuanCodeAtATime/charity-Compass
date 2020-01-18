@@ -51,7 +51,7 @@ h5 {
 
 
 
-#search {
+#search, #homeInput {
   /* display: block; */
   margin-bottom: 10px;
   width: 100%;
@@ -59,6 +59,11 @@ h5 {
   padding: 6px;
 }
 
+#charityName {
+  color: gold;
+  font-weight: bold;
+
+}
 
 /* Margin below login buttons */
 .login {
@@ -162,23 +167,38 @@ text-decoration: none;
   height: auto;
 } */
 
-#search-data-dump {
+#search-data-dump, #home-data-dump {
   overflow: hidden;  
   height: auto;
+}
+
+.search-dump, .home-search-dump  {
+  margin-top: 5px;
+  border-top: 2px solid red; 
 }
 
 div.scroll { 
   margin:15px, 4px; 
   padding:4px;   
   width: auto; 
-  height: 100px; 
+  height: 225px; 
   overflow-x: hidden; 
   overflow-x: auto; 
   text-align:justify; 
 } 
 
+
+
 /* Red search button */
 #search-orgs {
   margin-bottom: 5px;
 }
+
+form.myChar {
+ /* width: 250px; */
+  margin: 0;
+  padding: 0;
+  
+}
+
 

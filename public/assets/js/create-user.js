@@ -15,7 +15,8 @@ $(document).ready(function () {
         $.post("/api/signup", newUser)
             // On success, run the following code
             .then(function (res) {
-                res.redirect("/login");
+                alert("Thanks " + name + ", account succesfully created.  Please login")
+                window.location.href = "/login";
 
                 console.log("Here's the response" + "-------------------------------------" + data);
             });

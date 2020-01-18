@@ -5,11 +5,11 @@ const path = require("path");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 //
 module.exports = function (app) {
-    //
+
     app.get("/", function (req, res) {
         // If the user already has an account send them to the members page
         if (req.user) {
-            res.redirect("/members");
+            window.location.href = "/members";
         }
         res.sendFile(path.join(__dirname, "/../public/signup.html"));
     });
@@ -30,4 +30,15 @@ module.exports = function (app) {
     app.get("/members", isAuthenticated, function (req, res) {
         res.sendFile(path.join(__dirname, "/../public/members.html"));
     });
+
+    // // add route loads the members.html page, where users can enter new books to the db
+    // app.get("/members", function (req, res) {
+    //     res.sendFile(path.join(__dirname, "/../public/members.html"));
+    // });
+
+    // // all route loads the all.html page, where all books in the db are displayed
+    // app.get("/members", function (req, res) {
+    //     res.sendFile(path.join(__dirname, "/../public/members.html"));
+    // });
+
 };

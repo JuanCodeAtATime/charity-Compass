@@ -5,6 +5,8 @@ const bcrypt = require("bcryptjs");
 // Creating our User model
 //Set it as export because we will need it required on the server
 
+
+
 module.exports = function (sequelize, DataTypes) {
     let User = sequelize.define("User", {
         // The email cannot be null, and must be a proper email before creation
@@ -42,4 +44,16 @@ module.exports = function (sequelize, DataTypes) {
 
 };
 
+var Charity = sequelize.define("charities", {
+    name: Sequelize.STRING,
+    classification: Sequelize.STRING,
+    city: Sequelize.STRING,
+    state: Sequelize.STRING
+});
+
+// Syncs with DB
+Charity.sync();
+
+// Makes the Charity Model available for other files (will also create a table)
+module.exports = Charity;
 
