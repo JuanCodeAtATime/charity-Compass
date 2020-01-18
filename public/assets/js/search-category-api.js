@@ -53,7 +53,7 @@ $(document).ready(function () {
                     state.attr({ "class": "form-group", "id": "charState" });
 
                     // Buttons for Charities
-                    let addChar = $("<button type='submit' class='btn-primary' id='addChar'>Add to My Charities</button>");
+                    let addChar = $("<button type='button' class='btn-primary' id='addChar'>Add to My Charities</button>");
                     let charity_URL = $("<button type='button' class='btn-danger'>Visit Site</button>").on("click", function () { window.open(response[0, i].websiteURL) });
                     let give2Char = $("<button type='button' class='btn-success' id='give'>Give or Learn More</button>").on("click", function () { window.open(response[0, i].charityNavigatorURL) });
                     let lineBreak = $("<hr>")
@@ -115,7 +115,7 @@ $(document).ready(function () {
                         $("#char-name-input").val("");
                         $("#cause-input").val("");
                         $("#char-city-input").val("");
-                        $("#char-city-input").val("");
+                        $("#char-state-input").val("");
 
                     });
 
@@ -234,7 +234,7 @@ $(document).ready(function () {
                         $("#char-name-input").val("");
                         $("#cause-input").val("");
                         $("#char-city-input").val("");
-                        $("#char-city-input").val("");
+                        $("#char-state-input").val("");
 
                     });
 
