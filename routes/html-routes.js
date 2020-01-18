@@ -15,7 +15,7 @@ module.exports = function (app) {
     });
     //
     app.get("/login", function (req, res) {
-        console.log('req', req)
+        console.log('req')
         // If the user already has an account send them to the members page
         if (req.user) {
             console.log('hitting condition')
@@ -36,9 +36,9 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "/../public/members.html"));
     });
 
-    // all route loads the all.html page, where all books in the db are displayed
-    app.get("/members", function (req, res) {
-        res.sendFile(path.join(__dirname, "/../public/members.html"));
-    });
+    // // all route loads the all.html page, where all books in the db are displayed
+    // app.get("/members", function (req, res) {
+    //     res.sendFile(path.join(__dirname, "/../public/members.html"));
+    // });
 
 };

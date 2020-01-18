@@ -29,14 +29,14 @@ module.exports = function (app) {
             password: req.body.password
         }).then(function () {
             console.log("==========================")
-            console.log("SUCCESS!" + name + " and his email(" + email + ") has been successfully registered.");
+            console.log("SUCCESS!  Account has been successfully created.");
             console.log("==========================")
             // res.send should be at the bottom of your function body
             // res.send("hello");
             res.redirect("/login");
 
         }).catch(function (err) {
-            console.log(err);
+            console.log("Error");
             res.json(err);
             // res.status(422).json(err.errors[0].message);
         });

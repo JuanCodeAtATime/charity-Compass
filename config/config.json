@@ -4,7 +4,7 @@
     "password": "Daisy2990!",
     "database": "charity_compass",
     "host": "127.0.0.1",
-    "dialect": "mysql",
+    "dialect": "mysql2",
     "operatorsAliases": false
   },
   "development": {
@@ -28,7 +28,7 @@
     "password": "Daisy2990!",
     "database": "database_production",
     "host": "127.0.0.1",
-    "dialect": "mysql",
+    "dialect": "mysql2",
     "operatorsAliases": false
   }
 }
