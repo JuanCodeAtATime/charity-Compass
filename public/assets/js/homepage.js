@@ -5,7 +5,7 @@ $(document).ready(function () {
     });
 
     function scrollToSearch() {
-        let searchSection = document.getElementById("homeInput");
+        let searchSection = document.getElementById("homeSearch");
         searchSection.scrollIntoView();
     }
 
@@ -37,7 +37,6 @@ $(document).ready(function () {
                     let dataDump = $("<div>");
                     dataDump.attr({ "class": "home-search-dump" });
 
-                    //Created attributes containing src properties for both still and animated gifs
 
                     // Creating a section listing the charity organizations
                     let n = $("<h4>").text("Charity Name: " + response[0, i].charityName);
@@ -46,13 +45,17 @@ $(document).ready(function () {
                     let city = $("<h5>").text("City: " + response[0, i].mailingAddress.city);
                     let state = $("<h5>").text("State: " + response[0, i].mailingAddress.stateOrProvince);
                     let irs = $("<h5>").text("IRS Subsection: " + response[0, i].irsClassification.subsection);
+                    let lineBreak = $("<hr>")
+                    lineBreak.attr({ "id": "lb" });
 
 
-                    // Prepending the dataDump to the newly created div
-                    let searchDump = $("#home-data-dump").append(dataDump);
+
+                    // prepending the dataDump to the newly created div
+                    let searchDump = $("#home-data-dump").prepend(dataDump);
 
 
-                    //Prepending the Charities info to the data dump div
+                    //appending the Charities info to the data dump div
+                    searchDump.append(lineBreak);
                     searchDump.append(n);
                     searchDump.append(classif);
                     searchDump.append(city);
@@ -66,7 +69,7 @@ $(document).ready(function () {
 
     // Function to empty out the search input field
     function clear() {
-        $("#homeInput").empty();
+        $("#homeInput").val("");
     }
 
 
@@ -76,8 +79,8 @@ $(document).ready(function () {
         console.log("Success " + "You just entered " + searchInput)
 
         searchHomepg("", searchInput);
-        clear();
 
+        clear();
         //This prevents the buttons default behavior when clicked (which is submitting a form)
         event.preventDefault();
 

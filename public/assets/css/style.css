@@ -177,10 +177,16 @@ text-decoration: none;
   height: auto;
 }
 
-.search-dump, .home-search-dump  {
+.search-dump {
   margin-top: 5px;
   border-top: 2px solid red; 
 }
+
+#lb {
+background-color:  red; 
+}
+
+
 
 div.scroll { 
   margin:15px, 4px; 

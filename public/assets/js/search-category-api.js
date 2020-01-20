@@ -59,11 +59,11 @@ $(document).ready(function () {
                     let lineBreak = $("<hr>")
 
 
-                    // Prepending the dataDump to the newly created div
-                    let searchDump = $("#search-data-dump").append(dataDump);
+                    // appending the dataDump to the newly created div
+                    let searchDump = $("#search-data-dump").prepend(dataDump);
 
 
-                    //Prepending the Charities info to the data dump div
+                    //appending the Charities info to the data dump div
                     searchDump.append(n);
                     searchDump.append(classif);
                     searchDump.append(city);
@@ -126,7 +126,7 @@ $(document).ready(function () {
 
     // Function to empty out the search input field
     function clear() {
-        $("#search").empty();
+        $("#search").val("");
     }
 
     $("#search-orgs").on('click', function (event) {
@@ -175,12 +175,12 @@ $(document).ready(function () {
                     let addChar = $("<button type='button' class='btn-primary' id='addChar'>Add to My Charities</button>");
                     let give2Char = $("<button type='button' class='btn-success' id='give'>Give or Learn More</button>").on("click", function () { window.open(response[0, i].charityNavigatorURL) });
                     let lineBreak = $("<hr>")
-                    // Prepending the dataDump to the newly created div
+                    // appending the dataDump to the newly created div
                     let categoryDump = $("#cat-data-dump").append(dataDump);
 
 
 
-                    //Prepending the Charities info elements to the data dump div
+                    //appending the Charities info elements to the data dump div
                     categoryDump.append(n);
                     categoryDump.append(classif);
                     categoryDump.append(city);
@@ -243,6 +243,8 @@ $(document).ready(function () {
             });
     }
 
+
+    //Below category cards hold numeric values which correspond to irs categories and API integer datatype
 
     $(document).on("click", "#animal", function () {
         b.value = 1;

@@ -1,22 +1,30 @@
-# charity-Compass
+## CHARITY COMPASS *Give Wisely*
+
+- ```Developer: Juan Rivera```
+- ```Date: January 20, 2020```
+
+*****
+
+### BRIEF DESCRIPTION
+
+The Charity Compass application helps users find trustworthy charities.  Powered by Charity Navigator, it uses a database that stores key information of over 1 million non profit organizations.   
+Features include a members page allowing users the ability to find charities by category, and a section where members can add or remove charities of interest. 
 
 
+### TECHINCAL OVERVIEW
 
+**Programming Language:** javaScript
+**Server:** Express
+**Runtime Evironment:**  Node.js
+**DBMS:**  MySQL
+**ORM:**  Sequelize 
+**Authentication:**  Passport (local-strategy)
+**API's used:** 1. Charity Navigator 
 
-Charity Navigator Attribution Notes:
+*****
 
+#### Attribution Notes:
 
- "Branding; Data Attribution; Marketing. 
-(a)    You shall comply with the attribution requirements, quality control or brand guidelines issued by Charity Navigator from time to time (the “Attribution Requirements”).
-
-(b)    You shall accord Charity Navigator the following technical credit on the Licensee Site with the format, size, and placement thereof to be no less favorable than any other technical credit on the Licensee Site: “Powered by Charity Navigator.”  
-
-(c)    On each web page on the Licensee Site that contains Charity Navigator data or content, You agree to identify Charity Navigator as the source of such data. 
-
-(d)    You shall abide by any requests by Charity Navigator with respect to Your use of the Charity Navigator Trademarks, and shall include the following attribution of Charity Navigator’s ownership of its trademarks, such attribution to be included adjacent to each use of the Charity Navigator data or content, as well within the credits notice section of Your product, product documentation, or other product communication: CHARITY NAVIGATOR and the CHARITY NAVIGATOR logo are registered trademarks of Charity Navigator. All rights reserved. Used with permission.
-
-(e)    Charity Navigator shall be permitted to: (i) use Your name to identify You as a user of the API, and (ii) use Your name and logo in connection with Charity Navigator’s marketing and promotion activities with Your prior approval.
-
-CHARITY NAVIGATOR and the CHARITY NAVIGATOR logo are registered trademarks of Charity Navigator. All rights reserved. Used with permission."
+*CHARITY NAVIGATOR* and the CHARITY NAVIGATOR logo are registered trademarks of Charity Navigator. All rights reserved. Used with permission."
 
 Source:  https://charity.3scale.net/tos
