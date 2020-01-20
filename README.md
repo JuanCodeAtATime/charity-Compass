@@ -13,13 +13,13 @@ Features include a members page allowing users the ability to find charities by 
 
 ### TECHINCAL OVERVIEW
 
--**Programming Language:** javaScript
--**Server:** Express
--**Runtime Evironment:**  Node.js
--**DBMS:**  MySQL
--**ORM:**  Sequelize 
--**Authentication:**  Passport (local-strategy)
--**API's used:** 1. Charity Navigator 
+-```**Programming Language:** javaScript```
+-```**Server:** Express```
+-```**Runtime Evironment:**  Node.js```
+-```**DBMS:**  MySQL```
+-```**ORM:**  Sequelize```
+-```**Authentication:**  Passport (local-strategy)```
+-```**API's used:** 1. Charity Navigator``` 
 
 *****
 
