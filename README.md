@@ -11,7 +11,7 @@ The **Charity Compass** application helps users find trustworthy charities.  Pow
 Features include a members page allowing users the ability to find charities by category, and a section where members can add or remove charities of interest. 
 
 
-### TECHINCAL OVERVIEW
+### TECHINCAL DETAILS
 
 * **Programming Language:** javaScript
 * **Server:** Express
@@ -25,6 +25,6 @@ Features include a members page allowing users the ability to find charities by 
 
 #### Attribution Notes:
 
-*CHARITY NAVIGATOR* and the CHARITY NAVIGATOR logo are registered trademarks of Charity Navigator. All rights reserved. Used with permission."
+*CHARITY NAVIGATOR* and the CHARITY NAVIGATOR logo are registered trademarks of Charity Navigator. All rights reserved. Used with permission.
 
 Source:  https://charity.3scale.net/tos
