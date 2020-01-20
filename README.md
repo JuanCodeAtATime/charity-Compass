@@ -1,4 +1,4 @@
-## CHARITY COMPASS *Give Wisely*
+## CHARITY COMPASS | *Give Wisely*
 
 - ```Developer: Juan Rivera```
 - ```Date: January 20, 2020```
