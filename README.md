@@ -11,7 +11,7 @@ The **Charity Compass** application helps users find trustworthy charities.  Pow
 Features include a members page allowing users the ability to find charities by category, and a section where members can add or remove charities of interest. 
 
 
-### TECHINCAL DETAILS
+### TECHNICAL DETAILS
 
 * **Programming Language:** javaScript
 * **Server:** Express
