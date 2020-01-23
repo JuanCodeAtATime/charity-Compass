@@ -1,25 +1,13 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models/");
 var passport = require("../config/passport");
-// var Charity = require("../models/charities.js");
-var Charity = require("../models/charities");
-
 
 module.exports = function (app) {
-    // Using the passport.authenticate middleware with our local strategy.
-    // If the user has valid login credentials, send them to the members page.
-    // Otherwise the user will be sent an error
-    // app.post("/login", passport.authenticate("local"), function (req, res) {
-    //     // If this function gets called, authentication was successful.
-    //     // `req.user` contains the authenticated user.
-    //     res.redirect('/members');
-    // });
+
     app.post("/api/login", passport.authenticate("local"), function (req, res) {
         res.json(req.user);
     });
 
-
-    //
     // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
     // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
     // otherwise send back an error
@@ -31,8 +19,7 @@ module.exports = function (app) {
             console.log("==========================")
             console.log("SUCCESS!  Account has been successfully created.");
             console.log("==========================")
-            // res.send should be at the bottom of your function body
-            // res.send("hello");
+
             res.redirect("/login");
 
         }).catch(function (err) {
@@ -65,42 +52,5 @@ module.exports = function (app) {
         }
     });
 
-    // Get all charities
-    app.get("/api/members", function (req, res) {
-        Charity.findAll({}).then(function (results) {
-            res.json(results);
-        });
-    });
-
-
-    // Add new charity
-    app.post("/api/new", function (req, res) {
-        console.log("Charity Data:");
-        console.log(req.body);
-        Charity.create({
-            name: req.body.name,
-            classification: req.body.classification,
-            city: req.body.city,
-            state: req.body.state
-        }).then(function (results) {
-            res.json(results);
-        });
-    });
-
-    // Delete a charity
-    app.delete("/api/charity/:id", function (req, res) {
-        console.log("Charity ID:");
-        console.log(req.params.id);
-        Charity.destroy({
-            where: {
-                id: req.params.id
-            }
-        }).then(function () {
-            res.end();
-        });
-    });
-
-
-};
-
+}
 

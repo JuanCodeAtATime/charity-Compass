@@ -29,12 +29,12 @@ $(document).ready(function () {
             password: password
         })
             .then(function () {
-                // window.location.replace("/members");
-                res.redirect("/members");
+                window.location.replace("/members");
+                // res.redirect("/members");
                 // If there's an error, log the error
             })
-            .catch(function (err) {
-                console.log(err);
-            });
+        // .catch(function (err) {
+        //     console.log(err);
+        // });
     }
 });

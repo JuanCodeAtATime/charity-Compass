@@ -1,29 +1,34 @@
-// The code in add.js handles what happens when the user clicks the "Add to My Charities" button.
+$(document).ready(function () {
+    // The code in add.js handles what happens when the user clicks the "Add to My Charities" button.
 
-// When user clicks add-btn
-$("#addChar").on("click", function (event) {
-    event.preventDefault();
+    // BUTTON FROM INPUT FIELDS TO ADD FUNCTION
+    $("#addCharFields").click(function () {
+        console.log("This add button works");
+        event.preventDefault();
 
-    // Add a addCharity object
-    var addCharity = {
-        name: $("#charName").value,
-        classification: $("#classif").value,
-        city: $("#charCity").value,
-        state: $("#charState").value
-    };
+        // Make a newBook object
+        var newCharity = {
+            name: $("#char-name-input").val().trim(),
+            classification: $("#cause-input").val().trim(),
+            city: $("#char-city-input").val().trim(),
+            state: $("#char-state-input").val().trim()
+        };
 
-    // Send an AJAX POST-request with jQuery
-    $.post("/api/new", addCharity)
-        // On success, run the following code
-        .then(function (data) {
-            // Log the data we found
-            console.log(data);
-        });
+        // Send an AJAX POST-request with jQuery
+        $.post("/api/new", newCharity)
+            // On success, run the following code
 
-    // Empty each input box by replacing the value with an empty string
-    $("#charName").value = "";
-    $("#classif").value = "";
-    $("#charCity").value = "";
-    $("#charState").value = "";
+            .then(function (data) {
+                // Log the data we found
+                console.log(data);
+            });
 
-});
+        // Empty each input box by replacing the value with an empty string
+        $("#char-name-input").val("");
+        $("#cause-input").val("");
+        $("#char-city-input").val("");
+        $("#char-state-input").val("");
+
+    });
+
+})

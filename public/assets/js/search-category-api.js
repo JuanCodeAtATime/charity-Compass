@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
     // INITIALIZING VARIABLES
     //Charity Navigator API key
     const apiKey = "app_key=fe3148ffb1187f69826fe8ae404cca5b&pageSize=30&pageNum=10&";
@@ -90,36 +88,6 @@ $(document).ready(function () {
                         d.value = response[0, i].mailingAddress.stateOrProvince;
                     });
 
-                    // BUTTON FROM INPUT FIELDS TO ADD FUNCTION
-                    $("#addCharFields").click(function () {
-
-                        event.preventDefault();
-
-                        // Make a newBook object
-                        var newCharity = {
-                            name: $("#char-name-input").val().trim(),
-                            classification: $("#cause-input").val().trim(),
-                            city: $("#char-city-input").val().trim(),
-                            state: $("#char-state-input").val().trim()
-                        };
-
-                        // Send an AJAX POST-request with jQuery
-                        $.post("/api/new", newCharity)
-                            // On success, run the following code
-                            .then(function (data) {
-                                // Log the data we found
-                                console.log(data);
-                            });
-
-                        // Empty each input box by replacing the value with an empty string
-                        $("#char-name-input").val("");
-                        $("#cause-input").val("");
-                        $("#char-city-input").val("");
-                        $("#char-state-input").val("");
-
-                    });
-
-
                 }
             });
     }
@@ -207,37 +175,6 @@ $(document).ready(function () {
                         c.value = response[0, i].mailingAddress.city;
                         d.value = response[0, i].mailingAddress.stateOrProvince;
                     });
-
-
-                    // BUTTON FROM INPUT FIELDS TO ADD FUNCTION
-                    $("#addCharFields").click(function () {
-
-                        event.preventDefault();
-
-                        // Make a newBook object
-                        var newCharity = {
-                            name: $("#char-name-input").val().trim(),
-                            classification: $("#cause-input").val().trim(),
-                            city: $("#char-city-input").val().trim(),
-                            state: $("#char-state-input").val().trim()
-                        };
-
-                        // Send an AJAX POST-request with jQuery
-                        $.post("/api/new", newCharity)
-                            // On success, run the following code
-                            .then(function (data) {
-                                // Log the data we found
-                                console.log(data);
-                            });
-
-                        // Empty each input box by replacing the value with an empty string
-                        $("#char-name-input").val("");
-                        $("#cause-input").val("");
-                        $("#char-city-input").val("");
-                        $("#char-state-input").val("");
-
-                    });
-
 
                 }
             });
