@@ -30,9 +30,9 @@ $(document).ready(function () {
 
                     // Creating and storing a div tag
                     let dataDump = $("<div>");
-                    let buttonArray = $("<form>");
+
                     // buttonArray.attr({ "action method": "post" })
-                    dataDump.attr({ "class": "search-dump form-group" });
+                    dataDump.attr({ "id": "search-data-dump", "style": "background:rgba(0, 0, 0, 0.5)" });
 
                     //Created attributes containing src properties for both still and animated gifs
 
@@ -53,8 +53,9 @@ $(document).ready(function () {
                     // Buttons for Charities
                     let addChar = $("<button type='button' class='btn-primary' id='addChar'>Add to My Charities</button>");
                     let charity_URL = $("<button type='button' class='btn-danger'>Visit Site</button>").on("click", function () { window.open(response[0, i].websiteURL) });
-                    let give2Char = $("<button type='button' class='btn-success' id='give'>Give or Learn More</button>").on("click", function () { window.open(response[0, i].charityNavigatorURL) });
-                    let lineBreak = $("<hr>")
+                    let give2Char = $("<button type='button' class='btn-success' id='give'>Learn More</button>").on("click", function () { window.open(response[0, i].charityNavigatorURL) });
+                    let lineBreak = $("<hr>");
+                    lineBreak.attr({ "id": "lb" });
 
 
                     // appending the dataDump to the newly created div
@@ -62,6 +63,7 @@ $(document).ready(function () {
 
 
                     //appending the Charities info to the data dump div
+                    searchDump.append(lineBreak);
                     searchDump.append(n);
                     searchDump.append(classif);
                     searchDump.append(city);
@@ -70,7 +72,6 @@ $(document).ready(function () {
                     searchDump.append(addChar);
                     searchDump.append(give2Char);
                     searchDump.append(charity_URL);
-                    searchDump.append(lineBreak);
 
                     // Variables for dynamic buttons
 
@@ -126,6 +127,9 @@ $(document).ready(function () {
 
                     // Creating and storing a div tag
                     let dataDump = $("<div>");
+                    // buttonArray.attr({ "action method": "post" })
+                    dataDump.attr({ "id": "cat-data-dump", "style": "background:rgba(0, 0, 0, 0.5)" });
+
 
 
                     //Created attributes containing src properties for both still and animated gifs
@@ -141,14 +145,16 @@ $(document).ready(function () {
                     // Buttons for Charities
                     let charity_site = $("<button type='button' class='btn-danger'>Visit Site</button>").on("click", function () { window.open(response[0, i].websiteURL) });
                     let addChar = $("<button type='button' class='btn-primary' id='addChar'>Add to My Charities</button>");
-                    let give2Char = $("<button type='button' class='btn-success' id='give'>Give or Learn More</button>").on("click", function () { window.open(response[0, i].charityNavigatorURL) });
-                    let lineBreak = $("<hr>")
+                    let give2Char = $("<button type='button' class='btn-success' id='give'>Learn More</button>").on("click", function () { window.open(response[0, i].charityNavigatorURL) });
+                    let lineBreak = $("<hr>");
+                    lineBreak.attr({ "id": "lb" });
                     // appending the dataDump to the newly created div
-                    let categoryDump = $("#cat-data-dump").append(dataDump);
+                    let categoryDump = $("#cat-data-dump").prepend(dataDump);
 
 
 
                     //appending the Charities info elements to the data dump div
+                    categoryDump.append(lineBreak);
                     categoryDump.append(n);
                     categoryDump.append(classif);
                     categoryDump.append(city);
@@ -157,7 +163,7 @@ $(document).ready(function () {
                     categoryDump.append(addChar);
                     categoryDump.append(give2Char);
                     categoryDump.append(charity_site);
-                    categoryDump.append(lineBreak);
+
 
 
                     // Variables for dynamic buttons

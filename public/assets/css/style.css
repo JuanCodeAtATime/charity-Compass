@@ -46,6 +46,7 @@ h5 {
     color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
+  
 
 }  
 
@@ -113,7 +114,7 @@ h5 {
     padding: 8px;
     border-radius: 5px;
   }
-  .thumbnails2, .search-charity {
+  .thumbnails2, .search-charity, #my-dynamic-added-charities  {
     background: rgba(0, 0, 0, 0.5);
     height: auto;
     padding: 8px;
@@ -226,4 +227,16 @@ footer {
   font-weight: bold;
 }
 
+.my-dynamic-added-charities {
+
+background-color: cornsilk;
+border-radius: 5px;
+border-top: 5px solid red;  
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+float: left;
+margin: 3px;
+padding: 3px;
+}
 

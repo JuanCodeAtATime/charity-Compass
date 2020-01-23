@@ -35,7 +35,7 @@ $(document).ready(function () {
 
                     // Creating and storing a div tag
                     let dataDump = $("<div>");
-                    dataDump.attr({ "class": "home-search-dump" });
+                    dataDump.attr({ "id": "home-data-dump" });
 
 
                     // Creating a section listing the charity organizations
