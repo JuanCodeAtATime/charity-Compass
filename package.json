@@ -4,6 +4,7 @@
   "description": "Charity search and matching app",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "devStart": "nodemon server.js"
   },
   "dependencies": {
