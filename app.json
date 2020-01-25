@@ -1,0 +1,10 @@
+{
+    "name": "Charity Compass",
+    "description": "This app searches charities by keyword, category, and trustworthiness.",
+    "keywords": [
+        "charities",
+        "transparency",
+        "charity finder"
+    ],
+    "repository": "https://github.com/juanCodeatatime/charity-compass"
+}
