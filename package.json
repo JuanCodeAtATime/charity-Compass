@@ -4,7 +4,7 @@
   "description": "Charity search and matching app",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=production && node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
@@ -23,10 +23,6 @@
     "passport-local": "^1.0.0",
     "sequelize": "^5.21.3",
     "sequelize-cli": "^5.5.1"
-  },
-  "engines": {
-    "node": "10.16.0",
-    "npm": "^5.9.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
