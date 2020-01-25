@@ -24,11 +24,7 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": "Daisy2990!",
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql2",
-    "operatorsAliases": false
+    "use_environment_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }
