@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link
         href="https://fonts.googleapis.com/css?family=Squada+One|Kaushan+Script|Permanent+Marker|Shadows+Into+Light|Staatliches&display=swap"
@@ -25,10 +25,23 @@
     <div class="navbar bg-transparent">
         <h3 class='title'><span style="color: #ff0000">CHARITY</span> COMPASS</h3>
 
-        <div class="list">
-            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-            <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
-            <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/saved">Saved Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-dark scrape-new">SCRAPE NEW ARTICLES!</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-dark clear">CLEAR ARTICLES!</a>
+                </li>
+            </ul>
         </div>
 
     </div>

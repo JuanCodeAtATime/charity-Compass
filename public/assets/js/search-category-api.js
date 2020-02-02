@@ -8,12 +8,9 @@ $(document).ready(function () {
     //Charity Search Parameters
     const searchCharities = "search=";
     const category_search = "categoryID=";
-    let clickCategory = "";
     let b = document.getElementById("invisible-cat-box");
 
     // Charity category cards input numerical value into invisible field, which fetch data by numerical category.
-
-
 
     function searchOrgs(queryURL, search) {
 
@@ -23,18 +20,15 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         })
-            .done(function (response) {
+            .then(function (response) {
                 console.log("this is the 'get' response:" + response)
 
                 for (let i = 0; i < response.length; i++) {
 
                     // Creating and storing a div tag
                     let dataDump = $("<div>");
+                    dataDump.attr({ "id": "search-data-dump" });
 
-                    // buttonArray.attr({ "action method": "post" })
-                    dataDump.attr({ "id": "search-data-dump", "style": "background:rgba(0, 0, 0, 0.5)" });
-
-                    //Created attributes containing src properties for both still and animated gifs
 
                     // Creating a section listing the charity organizations
                     let n = $("<h4>").text("Charity Name: " + response[0, i].charityName);
@@ -51,15 +45,19 @@ $(document).ready(function () {
                     state.attr({ "class": "form-group", "id": "charState" });
 
                     // Buttons for Charities
-                    let addChar = $("<button type='button' class='btn-primary' id='addChar'>Add to My Charities</button>");
+                    let addChar = $("<button type='button' class='btn-primary addChar'>Add to My Charities</button>");
                     let charity_URL = $("<button type='button' class='btn-danger'>Visit Site</button>").on("click", function () { window.open(response[0, i].websiteURL) });
                     let give2Char = $("<button type='button' class='btn-success' id='give'>Learn More</button>").on("click", function () { window.open(response[0, i].charityNavigatorURL) });
                     let lineBreak = $("<hr>");
                     lineBreak.attr({ "id": "lb" });
 
 
+                    // This attr belongs inside addChar button -----> onclick='foo("+id+")'
+                    // function foo(id) {
+                    //    const found =  myResults.find((r) => r.id === id)
+                    // }
                     // appending the dataDump to the newly created div
-                    let searchDump = $("#search-data-dump").prepend(dataDump);
+                    let searchDump = $("#search-data-dump").append(dataDump);
 
 
                     //appending the Charities info to the data dump div
@@ -82,7 +80,8 @@ $(document).ready(function () {
                     let c = document.getElementById("char-city-input");
                     let d = document.getElementById("char-state-input");
 
-                    $("#addChar").on("click", function () {
+                    $(".addChar").on("click", function () {
+                        console.log(response[0, i].charityName);
                         a.value = response[0, i].charityName;
                         b.value = response[0, i].irsClassification.nteeClassification;
                         c.value = response[0, i].mailingAddress.city;
@@ -121,14 +120,14 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         })
-            .done(function (response) {
+            .then(function (response) {
 
                 for (let i = 0; i < response.length; i++) {
 
                     // Creating and storing a div tag
                     let dataDump = $("<div>");
                     // buttonArray.attr({ "action method": "post" })
-                    dataDump.attr({ "id": "cat-data-dump", "style": "background:rgba(0, 0, 0, 0.5)" });
+                    dataDump.attr({ "id": "cat-data-dump" });
 
 
 
@@ -144,12 +143,12 @@ $(document).ready(function () {
 
                     // Buttons for Charities
                     let charity_site = $("<button type='button' class='btn-danger'>Visit Site</button>").on("click", function () { window.open(response[0, i].websiteURL) });
-                    let addChar = $("<button type='button' class='btn-primary' id='addChar'>Add to My Charities</button>");
+                    let addChar = $("<button type='button' class='btn-primary' id='addCatChar'>Add to My Charities</button>");
                     let give2Char = $("<button type='button' class='btn-success' id='give'>Learn More</button>").on("click", function () { window.open(response[0, i].charityNavigatorURL) });
                     let lineBreak = $("<hr>");
                     lineBreak.attr({ "id": "lb" });
                     // appending the dataDump to the newly created div
-                    let categoryDump = $("#cat-data-dump").prepend(dataDump);
+                    let categoryDump = $("#cat-data-dump").append(dataDump);
 
 
 
@@ -175,7 +174,7 @@ $(document).ready(function () {
                     let c = document.getElementById("char-city-input");
                     let d = document.getElementById("char-state-input");
 
-                    $("#addChar").on("click", function () {
+                    $("#addCatChar").on("click", function () {
                         a.value = response[0, i].charityName;
                         b.value = response[0, i].irsClassification.nteeClassification;
                         c.value = response[0, i].mailingAddress.city;

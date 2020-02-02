@@ -176,6 +176,7 @@ text-decoration: none;
 #search-data-dump, #home-data-dump {
   overflow: hidden;  
   height: auto;
+  /* background-color: lightgrey;   */
 }
 
 .search-dump {
@@ -197,6 +198,7 @@ div.scroll {
   overflow-x: hidden; 
   overflow-x: auto; 
   text-align:justify; 
+  
 } 
 
 
@@ -238,5 +240,9 @@ font-weight: bold;
 float: left;
 margin: 3px;
 padding: 3px;
+}
+
+.dynamicCard {
+  display: none;
 }
 
