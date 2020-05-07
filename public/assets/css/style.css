@@ -5,24 +5,29 @@ body {
   background-attachment: fixed;
 }
 
+.searchBar {
+  margin-bottom: 1.85rem !important;
+
+}
+
 a.nav-link {
   color: whitesmoke !important;
   padding-right: 1rem !important;
 }
 
 .section1 {
-  margin-top: 100px;
+  margin-top: 3rem;
  
 }
 
 .survey-bg {
   background: rgba(0, 0, 0, 0.5);
-  min-width: 390px;
 
 }
 
 h5 {
-  color: whitesmoke;
+  color: whitesmoke !important;
+  font-weight: bolder !important;
 }
 
 .quote {
@@ -36,12 +41,12 @@ h5 {
 .title {   
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: whitesmoke;
-    font-size: 2.0 rem;       
+    font-size: 2rem;       
 }
 
 .tagline {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 50px;
+    font-size: 3rem;
     color: white;      
     
 }
