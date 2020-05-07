@@ -11,6 +11,11 @@
         href="https://fonts.googleapis.com/css?family=Squada+One|Kaushan+Script|Permanent+Marker|Shadows+Into+Light|Staatliches&display=swap"
         rel="stylesheet">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Load an icon library -->
@@ -20,16 +25,25 @@
 </head>
 
 <body>
+    <nav class="navbar  sticky-top navbar-expand-lg navbar-light bg-transparent">
+        <h3 class='navbar-brand title' style="color: red">CHARITY<span style="color: whitesmoke">COMPASS</span> </h3>
 
-    <div class="navbar bg-transparent">
-        <h3 class='title'><span style="color: #ff0000">CHARITY</span> COMPASS</h3>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mr-auto" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
 
-        <div class="list">
-            <a href="index.html"><i class="fa fa-fw fa-user"></i><span style="color: #ff0000"> Logout </span></a>
-            <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+                <a href="index.html"><i class="fa fa-fw fa-user"></i><span style="color: #ff0000"> Logout </span></a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li> -->
+            </ul>
         </div>
+    </nav>
 
-    </div>
     <hr>
 
 

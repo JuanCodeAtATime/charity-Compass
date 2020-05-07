@@ -8,10 +8,16 @@
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link
         href="https://fonts.googleapis.com/css?family=Squada+One|Kaushan+Script|Permanent+Marker|Shadows+Into+Light|Staatliches&display=swap"
         rel="stylesheet">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -21,17 +27,32 @@
 </head>
 
 <body>
+    <nav class="navbar  sticky-top navbar-expand-lg navbar-light bg-transparent">
+        <h3 class='navbar-brand title'><span style="color: #ff0000">CHARITY</span> COMPASS</h3>
 
-    <div class="navbar bg-transparent">
-        <h3 class='title'><span style="color: #ff0000">CHARITY</span> COMPASS</h3>
-
-        <div class="list">
-            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-            <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
-            <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mr-auto" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><i class="far fa-user"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html"><i class="fas fa-user-plus"></i> Signup</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li> -->
+            </ul>
         </div>
+    </nav>
 
-    </div>
+
     <!-- SECTION 1 -->
 
 

@@ -5,6 +5,11 @@ body {
   background-attachment: fixed;
 }
 
+a.nav-link {
+  color: whitesmoke !important;
+  padding-right: 1rem !important;
+}
+
 .section1 {
   margin-top: 100px;
  
@@ -94,6 +99,7 @@ h5 {
     color: whitesmoke;
     text-decoration: none;
     border-radius: 5%;
+    display: block;
 
   }
   
