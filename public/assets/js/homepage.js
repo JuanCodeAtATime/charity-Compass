@@ -20,7 +20,12 @@ $(document).ready(function () {
     const searchCharities = "search=";
 
 
+
     function searchHomepg(queryURL, search) {
+
+        if (!search) {
+            alert("Please enter keyword for better search results :)")
+        }
 
         queryURL = baseURL + searchCharities + search;
 
@@ -28,15 +33,17 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         })
-            .done(function (response) {
+            .then(function (response) {
                 console.log("this is the 'get' response:" + response)
+                document.getElementById("home-data-dump").innerHTML =
+                    "Displaying " + response.length + " results for '" + search + "'";
 
+                // window.location.replace("/searchresults.html");
                 for (let i = 0; i < response.length; i++) {
 
                     // Creating and storing a div tag
                     let dataDump = $("<div>");
                     dataDump.attr({ "id": "home-data-dump" });
-
 
                     // Creating a section listing the charity organizations
                     let n = $("<h4>").text("Charity Name: " + response[0, i].charityName);
@@ -64,6 +71,7 @@ $(document).ready(function () {
 
                 }
             });
+
     }
 
 
@@ -72,15 +80,15 @@ $(document).ready(function () {
         $("#homeInput").val("");
     }
 
+    function clearSearch() {
+        document.getElementById("home-data-dump").innerHTML = [];
+    }
 
-    $("#searchHomepg").on('click', function (event) {
 
-        searchInput = $("#homeInput").val().trim();
-        console.log("Success " + "You just entered " + searchInput)
+    $("#testButton").on('click', function (event) {
+        clearSearch();
+        console.log("Button works!!!")
 
-        searchHomepg("", searchInput);
-
-        clear();
         //This prevents the buttons default behavior when clicked (which is submitting a form)
         event.preventDefault();
 
@@ -89,5 +97,12 @@ $(document).ready(function () {
 
 
 
-
+    $("#searchHomepg").on('click', function (event) {
+        searchInput = $("#homeInput").val().trim();
+        console.log("Success " + "You just entered " + searchInput)
+        searchHomepg("", searchInput);
+        clear();
+        //This prevents the buttons default behavior when clicked (which is submitting a form)
+        event.preventDefault();
+    });
 });
