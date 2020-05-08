@@ -20,7 +20,6 @@ $(document).ready(function () {
     const searchCharities = "search=";
 
 
-
     function searchHomepg(queryURL, search) {
 
         if (!search) {
@@ -88,7 +87,6 @@ $(document).ready(function () {
     $("#testButton").on('click', function (event) {
         clearSearch();
         console.log("Button works!!!")
-
         //This prevents the buttons default behavior when clicked (which is submitting a form)
         event.preventDefault();
 

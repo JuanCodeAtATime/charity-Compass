@@ -3,7 +3,7 @@
 - ```Developer: Juan Rivera```
 - ```Date: January 20, 2020```
 
-![Charity Compass screenshot](public/screenshot.PNG)
+![Charity Compass screenshot](public/screenshot.png)
 
 *****
 ### Overview
