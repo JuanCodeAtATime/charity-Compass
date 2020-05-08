@@ -3,9 +3,9 @@
 - ```Developer: Juan Rivera```
 - ```Date: January 20, 2020```
 
-*****
-![Charity Compass screenshot](public/assets/images/screenshot.PNG)
+![Charity Compass screenshot](public/screenshot.PNG)
 
+*****
 ### Overview
 The **Charity Compass** application helps users find trustworthy charities.  Powered by *Charity Navigator*, it uses a database containing key information of over 1 million non profit organizations.   
 Features include a members page allowing users the ability to find charities by category, and a section where members can add or remove charities of interest. 
@@ -20,7 +20,6 @@ Features include a members page allowing users the ability to find charities by 
 * **Authentication:**  Passport (local-strategy)
 * **API's used:** 1. Charity Navigator
 
-*****
 
 ### FUTURE UPDATES
 This was a project from my coding bootcamp. As of 5/5/2020, I've decided to improve styling and functionality elements to include this app in my portfolio.
