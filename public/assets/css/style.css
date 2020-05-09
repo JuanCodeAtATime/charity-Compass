@@ -3,6 +3,7 @@ body {
   background-image: url("../images/compass.jpg");
   background-size: cover; 
   background-attachment: fixed;
+ 
 }
 
 .searchBar {
@@ -13,20 +14,58 @@ body {
 a.nav-link {
   color: whitesmoke !important;
   padding-right: 1rem !important;
+  display: block !important;  
+ 
 }
 
-.ul {margin-bottom: .5rem;}
+
+.ul,.navbar-collapse  {
+  margin-bottom: .5rem !important;
+  z-index: 3;  
+}
+
+
 /* Sticky search bar on homepage */
 .sticky {
-  position: -webkit-sticky;
+  position: -webkit-stickym !important; 
   position: sticky;
-  top: 3.5rem;
-  z-index: 1000;
-  margin-top: 1rem;
+  top: 5rem;
+  z-index: 2 !important;
+  margin: 1rem auto 1rem auto;
+  background: inherit !important;
 }
 
-.section1 {
-  margin-top: 4rem; 
+.section1 { 
+  background: inherit;
+}
+
+.section2 {
+  margin-top: 2rem;
+  z-index: 1; 
+}
+
+#testDiv {
+  background: inherit !important;
+  position: fixed;
+  height: 90px;
+  z-index: 1000 !important;
+  overflow: hidden; 
+  overflow-y: scroll;
+  top: 0; right: 0; bottom: 0; left: 0;
+
+  /* margin-top: .1rem;
+  font-weight: bold; */
+  
+  /* background-color: lightgrey;   */
+}
+
+#search-data-dump, #home-data-dump {
+  z-index: 1 !important;
+  height: auto;
+  margin-top: 1rem;
+  font-weight: bold;
+  
+  /* background-color: lightgrey;   */
 }
 
 .survey-bg {
@@ -49,6 +88,7 @@ h5 {
 
 .title {   
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
     color: whitesmoke;
     font-size: 2rem;       
 }
@@ -96,9 +136,9 @@ h5 {
 
 /* Style the navigation bar */
 .navbar {
-    width: 100%;
-    background-color: black;
-    overflow: auto;
+    width: 100%;   
+    margin-bottom: 3rem !important;
+    
   }
   
   /* Navbar links */
@@ -197,12 +237,7 @@ text-decoration: none;
   height: auto;
 } */
 
-#search-data-dump, #home-data-dump {
-  overflow: hidden;  
-  height: auto;
-  font-weight: bold;
-  /* background-color: lightgrey;   */
-}
+
 
 .search-dump {
   margin-top: 5px;

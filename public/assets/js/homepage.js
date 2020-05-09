@@ -42,7 +42,7 @@ $(document).ready(function () {
 
                     // Creating and storing a div tag
                     let dataDump = $("<div>");
-                    dataDump.attr({ "id": "home-data-dump" });
+                    dataDump.attr({ "id": "home-data-dump", "style": "background-color: 'red'" });
 
                     // Creating a section listing the charity organizations
                     let n = $("<h4>").text("Charity Name: " + response[0, i].charityName);
