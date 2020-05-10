@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
     <link
         href="https://fonts.googleapis.com/css?family=Squada+One|Kaushan+Script|Permanent+Marker|Shadows+Into+Light|Staatliches&display=swap"
         rel="stylesheet">
@@ -22,6 +24,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Load an icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Charity Compass Search</title>
 </head>
 
@@ -37,7 +40,7 @@
         <div class="collapse navbar-collapse mr-auto" id="navbarNav">
             <ul class="navbar-nav ml-auto ul">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fas fa-home"></i> Home <span
+                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home <span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -49,9 +52,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="members.html"><i class="fas fa-search"></i> Search</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li> -->
+
             </ul>
         </div>
     </nav>
@@ -62,92 +63,12 @@
     <!-- SECTION 1 -->
     <div class="container section1">
 
-        <!-- <div class="row">
-                <div class="col-md-12 search-charity">
-                    <h1 class="tagline">MY<span style="color: #FCD667"> CHARITIES</span></h1>
-
-                </div>
-            </div>
-            <br>
-
-            <div class="row">
-                <div class="col-md" id="my-char-add"> -->
-        <!-- Data Dump here -->
-        <!-- </div>
-            </div>
-
-            <br>
-
-            <div class="row">
-                <div class="col-md">
-                    <h4 class="title" style="color: #ff0000;">Add to My Charities</h4>
-                    <hr>
-                </div>
-
-                <form action="" method="POST" role="form" class="myChar row">
-                    <div class="col-md">
-                        <div class="form-group">
-                            <label for="meal-name-input"><strong>Name</strong> </label>
-                            <input type="text" class="form-control" id="char-name-input">
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="form-group">
-                            <label for="destination-input"><strong>Category</strong></label>
-                            <input type="text" class="form-control" id="cause-input">
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="form-group">
-                            <label for="lastM-input"><strong>City</strong></label>
-                            <input type="text" class="form-control" id="char-city-input">
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="form-group">
-                            <label for="lastM-input"><strong>State</strong></label>
-                            <input type="text" class="form-control" id="char-state-input">
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <label for="lastM-input"><strong>Confirm</strong></label>
-                        <button type="submit" class="btn btn-danger btn-block" id="addCharFields">Add</button>
-
-                    </div>
-
-                </form> -->
-        <!-- </div>  -->
-        <!-- Two /divs below are for panel-body and row divs directly above form -->
-
-
-        <!-- </section>
-    <div class="row search-charity">
-        <div class="col-md-6">
-            <h1 class="tagline">SEARCH<span style="color: #FCD667"> CHARITIES</span> BY <span style="color: #FCD667">
-                    NAME</span> OR KEYWORD</h1>
-        </div>
-    </div>
-    <br>
-
-    <div class="row">
-        <div class="col-md-5 search">
-            <input type="text" id="search" placeholder="Enter charity name, category or keyword">
-            <button type="button" class="btn btn-danger btn-inline" id="search-orgs">Search</button>
-        </div>
-    </div>
-    <div class="row scroll"> -->
-        <!-- Search by Keyword or Name data dump here -->
-        <!-- <div class="col-md-8 search" id="search-data-dump">
-        </div>
-    </div> -->
-
-
-
-
-        <div class="row search-charity sticky">
+        <div class="row sticky search-cats">
             <div class="col-md-6">
-                <h1 class="tagline">SEARCH<span style="color: #FCD667"> CHARITIES</span> BY <span
-                        style="color: #FCD667">CATEGORY</span></h1>
+                <h1 class="tagline">SEARCH<span style="color: #FCD667">
+                        CHARITIES</span> BY CATEGORY</h1>
+                <button type="button" class="btn btn-danger btn-inline" id="resetSearch"><i class="fas fa-redo"
+                        style="font-size: 1.25rem;"></i></button>
             </div>
 
         </div>
@@ -162,33 +83,27 @@
 
         <!-- This thumbnails2 div holds cards of charity categories  -->
 
-        <div class="thumbnails2" style="float: left;">
-            <div class="row">
+        <div class="thumbnails2">
+            <div class="row justify-content-center">
                 <div class="col-md-3 charCards">
                     <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="animal">
-                        <h3>Animals</h3>
+                    <div class="content" id="animal">
+                        <h3 class="cats">Animals</h3>
                     </div>
                 </div>
 
                 <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="arts">
-                        <h3>Arts, Culture, Humanities</h3>
+                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%">
+                    <div class=" content" id="arts">
+                        <h3 class="cats">Arts, Culture, Humanities</h3>
                     </div>
                 </div>
 
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="ed">
-                        <h3>Education</h3>
-                    </div>
 
-                </div>
                 <div class="col-md-3 charCards">
                     <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="enviro">
-                        <h3>Environment</h3>
+                    <div class="content" id="enviro">
+                        <h3 class="cats">Environment</h3>
                     </div>
                 </div>
 
@@ -196,58 +111,70 @@
 
             <br>
 
-            <div class="row">
+            <div class="row  justify-content-center">
                 <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="comm-dev">
-                        <h3>Community Development</h3>
+                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%">
+                    <div class="content" id="comm-dev">
+                        <h3 class="cats">Community Development</h3>
                     </div>
                 </div>
 
                 <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="health">
-                        <h3>Health</h3>
+                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%">
+                    <div class="content" id="health">
+                        <h3 class="cats">Health</h3>
                     </div>
                 </div>
 
                 <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" id="survey" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="human-svcs">
-                        <h3>Human Services</h3>
+                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%">
+                    <div class="content" id="survey" id="human-svcs">
+                        <h3 class="cats">Human Services</h3>
                     </div>
 
-                </div>
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="human-rights">
-                        <h3>Human & Civil Rights</h3>
-                    </div>
                 </div>
 
             </div>
 
             <br>
 
-            <div class="row">
+            <div class="row  justify-content-center">
                 <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="intern">
-                        <h3>International</h3>
+                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%">
+                    <div class="content" id="intern">
+                        <h3 class="cats">International</h3>
                     </div>
                 </div>
 
                 <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="religion">
-                        <h3>Religion</h3>
+                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%">
+                    <div class="content" id="religion">
+                        <h3 class="cats">Religion</h3>
                     </div>
                 </div>
 
                 <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="res-pub">
-                        <h3>Research and Public Policy</h3>
+                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%">
+                    <div class="content" id="res-pub">
+                        <h3 class="cats">Research and Public Policy</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row  justify-content-center">
+
+                <div class="col-md-3 charCards">
+                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%">
+                    <div class="content" id="enviro">
+                        <h3 class="cats">Environment</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-3 charCards">
+                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%">
+                    <div class="content" id="human-rights">
+                        <h3 class="cats">Human & Civil Rights</h3>
                     </div>
                 </div>
 
@@ -272,17 +199,16 @@
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-
-    <!-- <script src="/routes/api-routes-charity.js"></script> -->
+    <script src="assets/js/homepage.js"></script>
     <script src="assets/js/search-category-api.js"></script>
     <script src="assets/js/add.js"></script>
     <script src="assets/js/view.js"></script>

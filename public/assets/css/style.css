@@ -66,6 +66,7 @@ a.nav-link {
   height: auto;
   margin-top: 1rem;
   font-weight: bold;
+  margin: 1rem .5rem auto .5rem;
   
   /* background-color: lightgrey;   */
 }
@@ -197,6 +198,7 @@ h5 {
     background: rgba(0, 0, 0, 0.5);
     height: auto;
     padding: 8px;
+    margin: auto .5rem;
     border-radius: 5px;   
   }
 
@@ -204,10 +206,12 @@ h5 {
   h2.content {color: black;}
   image.opacity {opacity: .5 !important}
 
-  .charCards {
+  .charCards > h3 {
     margin-bottom: 5px;
+   
   }
 
+  h3.cats { color: rgba(0, 0, 0, 0.9);}
  
   
   .content {
@@ -235,6 +239,8 @@ h5 {
 .stats {
   text-align: left;
 }
+
+.search-cats {margin: auto .5rem !important}
 
 #pMBtn {
 text-decoration: none;
