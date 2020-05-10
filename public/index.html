@@ -28,6 +28,7 @@
 </head>
 
 <body>
+
     <nav class="navbar  sticky-top navbar-expand-lg navbar-light bg-transparent">
         <h3 class='navbar-brand title' style="color: red"><i class="far fa-compass"></i></span> CHARITY<span
                 style="color: whitesmoke">COMPASS</span> </h3>
@@ -59,14 +60,13 @@
 
 
     <!-- SECTION 1 -->
-    <div class="container section1">
-
-
+    <div class="container section1 justify-content-center">
         <div class="row searchBar justify-content-center sticky">
             <!-- <div class="col-md justify-content-end search">
-                <span> <i class="far fa-compass"></i></span>
-            </div> -->
-            <div class="col-md-8 search">
+                            <span> <i class="far fa-compass"></i></span>
+                        </div> -->
+            <div class="col-md-12 search justify-content-center mr-auto">
+
                 <input type="text" id="homeInput" placeholder="Enter charity name or keyword">
                 <button type="button" class="btn btn-success btn-inline" id="searchHomepg"><i class="far fa-compass"
                         style="font-size: 1.50rem;"></i></button>
@@ -77,14 +77,15 @@
         </div>
 
         <!-- Testing this div to hide scrollable home-data-dump data -->
-        <div id="testDiv">
-        </div>
+
 
 
         <div class="row justify-content-center">
-            <div class="col-md-8 search justify-content-center scroll" id="home-data-dump">
+            <div class="col-md-12 search justify-content-center scroll" id="home-data-dump">
             </div>
         </div>
+
+
         <!-- <div class="row justify-content-center">
             <div class="col-md justify-content-center">
                 <h1 class="tagline">POINT YOUR<span style="color: #ff0000"> HEART</span> IN THE RIGHT
@@ -106,52 +107,10 @@
             </div>
 
         </div> -->
-        <!--
-        Container holding three thumbnails
-        <div class="thumbnails">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <a href="search-charities.html">
-                            <div class="content" style="background: rgba(0, 0, 0, 0.5); width:92%;">
-                                <h2>Search Charities</h2>
-                                <p class="thumb-text">Learn more about charity organizations based on charity name or
-                                    keyword.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
 
-                    <div class="col-md-4">
-                        <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <a href="search-charities.html">
-                            <div class="content" style="background: rgba(0, 0, 0, 0.5); width:92%;">
-                                <h2>By Cause or Category</h2>
-                                <p class="thumb-text">Don't know where to start? Learn more about causes and categories
-                                    with a simple click of a button.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                        <a href="survey.html">
-                            <div class="content" id="survey" style="background: rgba(0, 0, 0, 0.5); width:92%;">
-                                <h2>Philanthro-Match</h2>
-                                <p class="thumb-text">Take the quick survey to find the charity organzations that best
-                                    align with
-                                    <em>your</em> values.</p>
-                            </div>
-                        </a>
-                    </div>
 
-                </div>
-            </div>
 
-        </div>
-       Container holding three thumbnails 
-    </div> -->
-        <!-- END SECTION 1 -->
+
         <!-- BEGIN SECTION 2 -->
         <div class="container section2">
             <div class="row justify-content-center">
@@ -182,42 +141,78 @@
                     </h5>
                 </div>
 
-                <!-- <div class="col-md-2">
-                    <h2 class="tagline stats"><i class='far fa-clock' style='font-size:55px'></i></h2>
-                    <h5>In just a few minutes, our <em><span style="color: #FCD667">Philanthro</span>Match</em> survey
-                        can
-                        find organizations aligned with your giving heart and giving hand.</h5>
-                </div> -->
+
             </div>
 
 
-            <!-- Button for Survey.  Survey nor button were finished for this (Version 1) deployment -->
-            <!-- <a href="survey.html"> <button type="button" class="btn btn-primary btn-lg btn-block" id="submit"><i
-                        class="fa fa-check-circle" aria-hidden="true"></i> Take
-                    <em><b><span style="color: #FCD667" id="pMBtn">Philanthro</span>Match</em></b> survey</button></a>
-            <hr> -->
-            <br><br>
-
-            <br>
-            <footer>
-                <p>Charity Compass | Copyright &copy; 2019 | Powered by <span style="color:#5DADEC"><em>Charity
-                            Navigator</em></span></p>
-            </footer>
 
 
-            <!-- END SECTION 2 -->
 
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-            <script src="https://code.jquery.com/jquery.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-                crossorigin="anonymous"></script>
-            <!-- <script src="assets/js/search-category-api.js"></script> -->
-            <script src="assets/js/homepage.js"></script>
+
+            <div class="thumbnails">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-3" style="width:100%; border-radius: 5px">
+                            <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;" class="opacity">
+                            <a href="members.html">
+                                <div class="content">
+                                    <h2 class="content">Search Charities</h2>
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;" class="opacity">
+                            <a href="members.html">
+                                <div class="content">
+                                    <h2 class="content">By Cause or Category</h2>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;" class="opacity">
+                            <a href="survey.html">
+                                <div class="content" id="survey">
+                                    <h2 class="content">Philanthro-Match</h2>
+
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+        <br><br>
+
+        <br>
+        <footer>
+            <p>Charity Compass | Copyright &copy; 2019 | Powered by <span style="color:red"><em>Charity
+                        Navigator</em></span></p>
+        </footer>
+
+
+        <!-- END SECTION 2 -->
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <!-- <script src="assets/js/search-category-api.js"></script> -->
+        <script src="assets/js/homepage.js"></script>
 
 </body>
 

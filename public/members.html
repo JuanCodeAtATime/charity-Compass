@@ -25,231 +25,225 @@
 </head>
 
 <body>
-    <nav class="navbar  sticky-top navbar-expand-lg navbar-light bg-transparent">
-        <h3 class='navbar-brand title' style="color: red">CHARITY<span style="color: whitesmoke">COMPASS</span> </h3>
+    <section class="firstWrapper">
+        <nav class="navbar  sticky-top navbar-expand-lg navbar-light bg-transparent">
+            <h3 class='navbar-brand title' style="color: red">CHARITY<span style="color: whitesmoke">COMPASS</span>
+            </h3>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse mr-auto" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mr-auto" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
 
-                <a href="index.html"><i class="fa fa-fw fa-user"></i><span style="color: #ff0000"> Logout </span></a>
-                </li>
-                <!-- <li class="nav-item">
+                    <a href="index.html"><i class="fa fa-fw fa-user"></i><span style="color: #ff0000"> Logout
+                        </span></a>
+                    </li>
+                    <!-- <li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li> -->
-            </ul>
-        </div>
-    </nav>
-
-    <hr>
-
-
-    <!-- SECTION 1 -->
-    <div class="container section1">
-
-        <div class="row">
-            <div class="col-md-12 search-charity">
-                <h1 class="tagline">MY<span style="color: #FCD667"> CHARITIES</span></h1>
-
+                </ul>
             </div>
-        </div>
-        <br>
+        </nav>
 
-        <div class="row">
-            <div class="col-md" id="my-char-add">
-                <!-- Data Dump here -->
-            </div>
-        </div>
-
-        <br>
-
-        <div class="row">
-            <div class="col-md">
-                <h4 class="title" style="color: #ff0000;">Add to My Charities</h4>
-                <hr>
-            </div>
-
-            <form action="" method="POST" role="form" class="myChar row">
-                <div class="col-md">
-                    <div class="form-group">
-                        <label for="meal-name-input"><strong>Name</strong> </label>
-                        <input type="text" class="form-control" id="char-name-input">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="form-group">
-                        <label for="destination-input"><strong>Category</strong></label>
-                        <input type="text" class="form-control" id="cause-input">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="form-group">
-                        <label for="lastM-input"><strong>City</strong></label>
-                        <input type="text" class="form-control" id="char-city-input">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="form-group">
-                        <label for="lastM-input"><strong>State</strong></label>
-                        <input type="text" class="form-control" id="char-state-input">
-                    </div>
-                </div>
-                <div class="col-md">
-                    <label for="lastM-input"><strong>Confirm</strong></label>
-                    <button type="submit" class="btn btn-danger btn-block" id="addCharFields">Add</button>
-
-                </div>
-
-            </form>
-        </div>
+        <hr>
 
 
-        <!-- Two /divs below are for panel-body and row divs directly above form -->
+        <!-- SECTION 1 -->
+        <div class="container section1">
 
-
-
-
-
-
-
-        <br>
-
-        <div class="row search-charity">
-            <div class="col-md-6">
-                <h1 class="tagline">SEARCH<span style="color: #FCD667"> CHARITIES</span> BY <span
-                        style="color: #FCD667"> NAME</span> OR KEYWORD</h1>
-            </div>
-        </div>
-        <br>
-
-        <div class="row">
-            <div class="col-md-5 search">
-                <input type="text" id="search" placeholder="Enter charity name, category or keyword">
-                <button type="button" class="btn btn-danger btn-inline" id="search-orgs">Search</button>
-            </div>
-        </div>
-        <div class="row scroll">
-            <!-- Search by Keyword or Name data dump here -->
-            <div class="col-md-8 search" id="search-data-dump">
-            </div>
-        </div>
-
-
-
-
-        <div class="row search-charity">
-            <div class="col-md-6">
-                <h1 class="tagline">SEARCH<span style="color: #FCD667"> CHARITIES</span> BY <span
-                        style="color: #FCD667">CATEGORY</span></h1>
-            </div>
-
-        </div>
-        <br>
-        <!-- Category Data dumps here -->
-        <div class="row">
-            <div class="col-md-8 search scroll" id="cat-data-dump"></div>
-            <!-- This invisible input field is display:none and holds the numeric values of Charity categories -->
-            <input type="number" class="form-control" id="invisible-cat-box">
-        </div>
-        <br>
-
-        <!-- This thumbnails2 div holds cards of charity categories  -->
-
-        <div class="thumbnails2">
             <div class="row">
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="animal">
-                        <h3>Animals</h3>
-                    </div>
-                </div>
-
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="arts">
-                        <h3>Arts, Culture, Humanities</h3>
-                    </div>
-                </div>
-
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="ed">
-                        <h3>Education</h3>
-                    </div>
+                <div class="col-md-12 search-charity">
+                    <h1 class="tagline">MY<span style="color: #FCD667"> CHARITIES</span></h1>
 
                 </div>
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="enviro">
-                        <h3>Environment</h3>
-                    </div>
-                </div>
+            </div>
+            <br>
 
+            <div class="row">
+                <div class="col-md" id="my-char-add">
+                    <!-- Data Dump here -->
+                </div>
             </div>
 
             <br>
 
             <div class="row">
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="comm-dev">
-                        <h3>Community Development</h3>
-                    </div>
+                <div class="col-md">
+                    <h4 class="title" style="color: #ff0000;">Add to My Charities</h4>
+                    <hr>
                 </div>
 
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="health">
-                        <h3>Health</h3>
+                <form action="" method="POST" role="form" class="myChar row">
+                    <div class="col-md">
+                        <div class="form-group">
+                            <label for="meal-name-input"><strong>Name</strong> </label>
+                            <input type="text" class="form-control" id="char-name-input">
+                        </div>
                     </div>
-                </div>
+                    <div class="col-md">
+                        <div class="form-group">
+                            <label for="destination-input"><strong>Category</strong></label>
+                            <input type="text" class="form-control" id="cause-input">
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-group">
+                            <label for="lastM-input"><strong>City</strong></label>
+                            <input type="text" class="form-control" id="char-city-input">
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-group">
+                            <label for="lastM-input"><strong>State</strong></label>
+                            <input type="text" class="form-control" id="char-state-input">
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <label for="lastM-input"><strong>Confirm</strong></label>
+                        <button type="submit" class="btn btn-danger btn-block" id="addCharFields">Add</button>
 
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" id="survey" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="human-svcs">
-                        <h3>Human Services</h3>
                     </div>
 
+                </form>
+            </div> <!-- Two /divs below are for panel-body and row divs directly above form -->
+
+
+    </section>
+    <div class="row search-charity">
+        <div class="col-md-6">
+            <h1 class="tagline">SEARCH<span style="color: #FCD667"> CHARITIES</span> BY <span style="color: #FCD667">
+                    NAME</span> OR KEYWORD</h1>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md-5 search">
+            <input type="text" id="search" placeholder="Enter charity name, category or keyword">
+            <button type="button" class="btn btn-danger btn-inline" id="search-orgs">Search</button>
+        </div>
+    </div>
+    <div class="row scroll">
+        <!-- Search by Keyword or Name data dump here -->
+        <div class="col-md-8 search" id="search-data-dump">
+        </div>
+    </div>
+
+
+
+
+    <div class="row search-charity">
+        <div class="col-md-6">
+            <h1 class="tagline">SEARCH<span style="color: #FCD667"> CHARITIES</span> BY <span
+                    style="color: #FCD667">CATEGORY</span></h1>
+        </div>
+
+    </div>
+    <br>
+    <!-- Category Data dumps here -->
+    <div class="row">
+        <div class="col-md-8 search scroll" id="cat-data-dump"></div>
+        <!-- This invisible input field is display:none and holds the numeric values of Charity categories -->
+        <input type="number" class="form-control" id="invisible-cat-box">
+    </div>
+    <br>
+
+    <!-- This thumbnails2 div holds cards of charity categories  -->
+
+    <div class="thumbnails2">
+        <div class="row">
+            <div class="col-md-3 charCards">
+                <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
+                <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="animal">
+                    <h3>Animals</h3>
                 </div>
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="human-rights">
-                        <h3>Human & Civil Rights</h3>
-                    </div>
+            </div>
+
+            <div class="col-md-3 charCards">
+                <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
+                <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="arts">
+                    <h3>Arts, Culture, Humanities</h3>
+                </div>
+            </div>
+
+            <div class="col-md-3 charCards">
+                <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
+                <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="ed">
+                    <h3>Education</h3>
                 </div>
 
             </div>
-
-            <br>
-
-            <div class="row">
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="intern">
-                        <h3>International</h3>
-                    </div>
+            <div class="col-md-3 charCards">
+                <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
+                <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="enviro">
+                    <h3>Environment</h3>
                 </div>
-
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="religion">
-                        <h3>Religion</h3>
-                    </div>
-                </div>
-
-                <div class="col-md-3 charCards">
-                    <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
-                    <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="res-pub">
-                        <h3>Research and Public Policy</h3>
-                    </div>
-                </div>
-
             </div>
 
         </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-3 charCards">
+                <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
+                <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="comm-dev">
+                    <h3>Community Development</h3>
+                </div>
+            </div>
+
+            <div class="col-md-3 charCards">
+                <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
+                <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="health">
+                    <h3>Health</h3>
+                </div>
+            </div>
+
+            <div class="col-md-3 charCards">
+                <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
+                <div class="content" id="survey" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="human-svcs">
+                    <h3>Human Services</h3>
+                </div>
+
+            </div>
+            <div class="col-md-3 charCards">
+                <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
+                <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="human-rights">
+                    <h3>Human & Civil Rights</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-3 charCards">
+                <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
+                <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="intern">
+                    <h3>International</h3>
+                </div>
+            </div>
+
+            <div class="col-md-3 charCards">
+                <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
+                <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="religion">
+                    <h3>Religion</h3>
+                </div>
+            </div>
+
+            <div class="col-md-3 charCards">
+                <img src="assets/images/thumbnail.PNG" alt="compass" style="width:100%;">
+                <div class="content" style="background: rgba(0, 0, 0, 0.5); width:89%;" id="res-pub">
+                    <h3>Research and Public Policy</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
     </div>
 

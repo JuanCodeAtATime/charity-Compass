@@ -7,8 +7,20 @@ body {
 }
 
 .searchBar {
-  margin: 2rem auto .25rem auto !important;
+  margin: 0 auto .25rem auto !important;
+  background: inherit !important;
+  padding-top: 2rem; 
+  align-content: center;
+  text-align: center;
+  z-index: 3 !important;
 
+  
+}
+
+
+.navbar {
+  z-index: 3;
+  background: inherit;
 }
 
 a.nav-link {
@@ -30,37 +42,24 @@ a.nav-link {
   position: -webkit-stickym !important; 
   position: sticky;
   top: 5rem;
-  z-index: 2 !important;
+  z-index: 3 !important;
   margin: 1rem auto 1rem auto;
   background: inherit !important;
-}
+  padding-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 5px;
 
-.section1 { 
-  background: inherit;
 }
 
 .section2 {
   margin-top: 2rem;
-  z-index: 1; 
-}
-
-#testDiv {
-  background: inherit !important;
-  position: fixed;
-  height: 90px;
-  z-index: 1000 !important;
-  overflow: hidden; 
-  overflow-y: scroll;
-  top: 0; right: 0; bottom: 0; left: 0;
-
-  /* margin-top: .1rem;
-  font-weight: bold; */
-  
-  /* background-color: lightgrey;   */
+  background: inherit;
+  z-index: -1 !important; 
 }
 
 #search-data-dump, #home-data-dump {
-  z-index: 1 !important;
+  z-index: -1 !important;
+  background: inherit;
   height: auto;
   margin-top: 1rem;
   font-weight: bold;
@@ -113,12 +112,12 @@ h5 {
 
 #search, #homeInput {
   /* display: block; */
-  margin-bottom: 10px;
+ 
   height: 3.25rem;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
+  width: 60%;
   border-radius: 5px;
   padding: 6px;
 }
@@ -161,6 +160,11 @@ h5 {
 
   }
   
+  i.searchBar {
+    font-size: 1rem;
+    margin-right: 1rem;
+    color: white;
+  }
   
   
   /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
@@ -173,11 +177,18 @@ h5 {
 /* Start Thumbnail Images */
   
   .thumbnails {
-    background-color: whitesmoke;
+    background-color: grey;
     height: auto;
-    padding: 8px;
+    margin-top: 2rem;
+    padding: 1rem;
     border-radius: 5px;
+    border-top: solid red .5rem;
+    border-bottom: solid red .5rem;
+    
   }
+
+  .col-md-3 {margin: .5rem;}
+
   .thumbnails2, .search-charity, #my-dynamic-added-charities  {
     background: rgba(0, 0, 0, 0.5);
     height: auto;
@@ -185,9 +196,9 @@ h5 {
     border-radius: 5px;   
   }
 
-  .thumb-text {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  .thumb-text {font-family: Arial, Helvetica, sans-serif;}
+  h2.content {color: black;}
+  image.opacity {opacity: .5 !important}
 
   .charCards {
     margin-bottom: 5px;
@@ -279,7 +290,7 @@ form.myChar {
 footer {
   padding: 14px;  
   color: whitesmoke;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.5); */
   text-align: center;
   margin-top: auto;
   bottom: 0;
