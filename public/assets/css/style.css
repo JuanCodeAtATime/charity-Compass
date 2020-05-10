@@ -2,7 +2,10 @@ body {
   margin: 0;
   background-image: url("../images/compass.jpg");
   background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: #464646;
  
 }
 
@@ -57,7 +60,7 @@ a.nav-link {
   z-index: -1 !important; 
 }
 
-#search-data-dump, #home-data-dump {
+#search-data-dump, #home-data-dump, #cat-data-dump  {
   z-index: -1 !important;
   background: inherit;
   height: auto;
@@ -95,7 +98,8 @@ h5 {
 .tagline {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 3rem;
-    color: white;      
+    color: white; 
+    font-weight: bold;     
     
 }
 

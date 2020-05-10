@@ -23,6 +23,7 @@ $(document).ready(function () {
             .then(function (response) {
                 console.log("this is the 'get' response:" + response)
 
+
                 for (let i = 0; i < response.length; i++) {
 
                     // Creating and storing a div tag
@@ -121,6 +122,10 @@ $(document).ready(function () {
             method: "GET"
         })
             .then(function (response) {
+
+                document.getElementById("cat-data-dump").innerHTML =
+                    "Displaying " + response.length + " results for this category.";
+
 
                 for (let i = 0; i < response.length; i++) {
 
